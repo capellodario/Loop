@@ -1,13 +1,5 @@
 #include <Arduino.h>
-/*
-Stepper Test
-By: Jonathan Kayne
-April 2018
-Use this code to make sure that your stepper motors are wired up
-properly to the A4988 drivers.
-Pin are set up for the Arduino CNC Shield V3 (X-axis)
-so change them to match the correct wiring you use.
-*/
+
 #define stepPin 5
 #define dirPin 2
 #define enPin 8
@@ -61,10 +53,6 @@ int semiminima =floor( valutatore/4);
 int minima = floor((valutatore/4)*2);
 int semibreve = valutatore;
 
-int noteFreq[] = {1912, 1805, 1703, 1607, 1517, 1431, 1351, 1275, 1203, 1136, 1072, 1012};
-int noteFreq0[] = {c * 2, cf * 2, d * 2, df * 2, e * 2, f * 2, ff * 2, g * 2, gf * 2, a * 2, af * 2, b * 2};
-int noteFreq1[] = {c1,cf1, d1, df1, e1, f1, ff1, g1, gf1, a1,af1, b1};
-
 int use = 180;
 int oct = 5;
 
@@ -105,24 +93,7 @@ void loop(){
 
   
     
-  // int t = 3000;
-  // for (int i = 0; i < sizeof(noteFreq0) / sizeof(noteFreq0[0]); i++)
-  // {
-  //   note(noteFreq0[i], croma);
-  //   pa(semicroma);
-  // }
 
-  // for (int i = 0; i < sizeof(noteFreq) / sizeof(noteFreq[0]); i++)
-  // {
-  //   note(noteFreq[i], croma);
-  //   pa(semicroma);
-  // }
-
-  // for (int i = 0; i < sizeof(noteFreq1) / sizeof(noteFreq1[0]); i++)
-  // {
-  //   note(noteFreq1[i], croma);
-  //   pa(semicroma);
-  // }
   
     note(d, semiminima);
     note(c, minima);
